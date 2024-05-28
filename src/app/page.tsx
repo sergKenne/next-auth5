@@ -20,8 +20,9 @@ export default async function Home() {
           />
           <h1 className="card__title">Sign In</h1>
           <p className="card__desc">Select a method to sign in to your account</p>
-          <button className="card__btn" name="action" value="google">Sign in with Google</button>
-          <button className="card__btn" name="action" value="github">Sign in with Github</button>
+          {/* <button className="card__btn" name="action" value="google">Sign in with Google</button>
+          <button className="card__btn" name="action" value="github">Sign in with Github</button> */}
+          <button className="card__btn">Sign in with Google or Github</button>
           <div className="card__divider"></div>
           <div className="card__input-item">
             <label className="card__label" htmlFor="email">Email</label>
