@@ -1,9 +1,13 @@
 import { signInSocialAction } from "@/action";
+import { auth } from "@/auth";
 import Image from "next/image";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth()
+  if(session?.user) redirect('/profile')
   return (
     <div className="container">
       <form action={signInSocialAction}>
